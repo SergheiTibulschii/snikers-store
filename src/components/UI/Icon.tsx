@@ -17,11 +17,11 @@ const icons: Record<Icons, React.FunctionComponent<React.SVGProps<SVGSVGElement>
 }
 interface Props {
     id: Icons
-    size: number
+    size?: number
     strokeWidth?: number
     className?: string
 }
-const Icon = ({ id, size, strokeWidth = 1, className }: Props) => {
+const Icon = ({ id, size = 24, strokeWidth = 1, className }: Props) => {
     const Component = icons[id]
 
     if (!Component) {
